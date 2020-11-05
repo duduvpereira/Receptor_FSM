@@ -1,0 +1,15 @@
+1 - se eu recebi uma palavra de alinhamento, 40 bits depois eu vou receber o A5 de novo e assim por diante
+
+1 - wait for a5
+2 - wait for 40 bits
+3 - wait for a5
+4 - wait for 40 bits
+5 - wait for a5 - recebeu? colococa sync_out pra 1 
+6 - começa a tratar o payload (separando alinhamento de payload)
+7 - se o alinhamento nao chegou, baixa o sync_out
+
+tratamento do payload:
+
+1 - coloca o dado no barramento
+2 - sobe data_pl_en_out flag -- FAZER ISSO PARA CADA BYTE -- 5x
+
